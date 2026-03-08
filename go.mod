@@ -1,4 +1,4 @@
-module github.com/supabase-community/realtime-go
+module github.com/tangyong230/realtime-go
 
 go 1.22
 
