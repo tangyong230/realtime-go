@@ -38,13 +38,14 @@ type RealtimeClient struct {
 }
 
 // NewRealtimeClient creates a new RealtimeClient instance
-func NewRealtimeClient(projectRef string, apiKey string) IRealtimeClient {
+func NewRealtimeClient(url string, apiKey string) IRealtimeClient {
 	config := NewConfig()
-	config.URL = fmt.Sprintf(
+	config.URL = url
+	/*config.URL = fmt.Sprintf(
 		"wss://%s.supabase.co/realtime/v1/websocket?apikey=%s&log_level=info&vsn=1.0.0",
 		projectRef,
 		apiKey,
-	)
+	)*/
 	config.APIKey = apiKey
 
 	return &RealtimeClient{
